@@ -7,10 +7,23 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I'm Junnan Li. I received my B.S. in Computer Science from the University of Wisconsin–Madison.
+Hi! I'm Junnan Li. I received my B.S. in Computer Science from the University of Wisconsin–Madison, where I was fortunate to work with [Prof. Karu Sankaralingam](https://karu.sites.cs.wisc.edu/wiki/) on machine learning for systems.
 
-During my undergraduate studies, I was fortunate to work with [Prof. Karu Sankaralingam](https://karu.sites.cs.wisc.edu/wiki/) on research in machine learning for systems (ML for Systems).
-
-I am currently a contributor to [SGLang-Omni](https://github.com/sgl-project/sglang-omni), an open-source serving framework for multimodal models.
+Recently, I have become interested in AI infrastructure. I am contributing to [SGLang-Omni](https://github.com/sgl-project/sglang-omni), an open-source serving framework for multimodal models, mainly working on full-duplex streaming and serving performance.
 
 My interests lie in **AI agents**, **AI infrastructure**, and **recommendation systems**.
+
+Publications
+======
+
+**Harbor Adapters and Harbor-Index: Infrastructure and a Curated Meta-Dataset for Large-Scale Agentic Evaluation**  
+Lin Shi, Haowei Lin, ..., **Junnan Li**, et al.  
+*NeurIPS 2026* · [arXiv](https://arxiv.org/abs/2609.04298)
+
+**InfraBench: Evaluating Infrastructure Agents Across Layers, Lifecycle, and Risk**  
+Yuan Gao, Zeren Yang, **Junnan Li**, Shawn (Wanxiang) Zhong, Ahmed Dajani, Mai Zheng, Andrea Arpaci-Dusseau, Remzi Arpaci-Dusseau  
+*HotInfra 2026* · [arXiv](https://arxiv.org/abs/2608.11234)
+
+**Beyond Static Policies: Exploring Dynamic Policy Selection for Single-Thread Performance Optimization**  
+Yanxin Zhang, Ian McDougall, **Junnan Li**, Shayne Wadle, Vikas Singh, Karthikeyan Sankaralingam  
+*IEEE Computer Architecture Letters* · [arXiv](https://arxiv.org/abs/2605.05471)
