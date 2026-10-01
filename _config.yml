@@ -26,7 +26,7 @@ author:
   avatar           : "profile.png"
   name             : "Junnan Li"
   pronouns         : # example: "she/her"  
-  bio              : "Personal website (under construction)"
+  bio              : "Software engineer · LLM serving & AI infrastructure"
   location         : "Seattle, WA"
   employer         : 
   uri              : # URL
@@ -220,19 +220,7 @@ kramdown:
 
 
 # These settings control the types of collections used by the template
-collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
+collections: {}
 
 
 # These settings control how pages and collections are included in the site

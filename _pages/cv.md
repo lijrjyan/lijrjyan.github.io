@@ -11,54 +11,31 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+**University of Wisconsin–Madison** — B.S. in Computer Science, GPA 3.885/4.0, Dean's List *(Jun 2022 – Dec 2025)*  
+Coursework: Distributed Systems, Operating Systems, Databases, Computer Networks, Algorithms, Machine Learning
 
-Work experience
+Experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+**SGLang-Omni** — Open-Source Core Contributor, Multimodal LLM Serving *(Jul 2026 – present)*
+* Led full-duplex streaming support (roadmap [#1909](https://github.com/sgl-project/sglang-omni/issues/1909), RFC [#2052](https://github.com/sgl-project/sglang-omni/issues/2052)) and implemented its core runtime.
+* Radix KV-cache eviction (Qwen3-TTS QPS +19%, TTFA p95 −39%) and first-audio chunk scheduling (TTFA p95 −24–42%).
+* ASR serving extensions and correctness fixes across Qwen3-ASR/TTS.
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+**UW–Madison** — Capstone Project, advised by Space Science and Engineering Center *(Aug – Dec 2025)*
+* Built an AIOps incident-diagnosis agent (LangGraph, FastAPI/SSE) with hybrid-retrieval RAG (nDCG@10 +42%) and replay-based evaluation.
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+More details on the [Projects](/projects/) page.
 
 Publications
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
+* **InfraBench: Evaluating Infrastructure Agents Across Layers, Lifecycle, and Risk.** *HotInfra 2026.* [arXiv](https://arxiv.org/abs/2608.11234)
+* **Harbor Adapters and Harbor-Index.** *NeurIPS 2026 (Poster).* [arXiv](https://arxiv.org/abs/2609.04298)
+* **Beyond Static Policies: Exploring Dynamic Policy Selection for Single-Thread Performance Optimization.** *IEEE Computer Architecture Letters.* [arXiv](https://arxiv.org/abs/2605.05471)
+
+Skills
 ======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+* **Languages:** Java, Python, Go, SQL, TypeScript, JavaScript, Bash
+* **Backend & Web:** Spring Boot, Django, FastAPI, React, Flowable
+* **Data & Messaging:** PostgreSQL, Redis, Kafka, RabbitMQ, MQTT, Qdrant, pgvector, FAISS
+* **Cloud & Infra:** AWS (Lambda, S3, SQS, DynamoDB, Step Functions), Kubernetes, Terraform, Docker, Linux
+* **AI & ML:** PyTorch, Hugging Face Transformers, vLLM, SGLang, verl, OpenRLHF, LLaMA-Factory, LangGraph
