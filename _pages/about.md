@@ -7,21 +7,10 @@ redirect_from:
   - /about.html
 ---
 
-I'm Junnan Li, a software engineer based in Seattle. I graduated from the University of Wisconsin–Madison with a B.S. in Computer Science (Dec 2025).
+Hi! I'm Junnan Li. I received my B.S. in Computer Science from the University of Wisconsin–Madison.
 
-I work on **systems for serving and evaluating large models**. I'm currently an open-source core contributor to [SGLang-Omni](https://github.com/sgl-project/sglang-omni), the multimodal (speech / audio / omni-model) serving framework in the SGLang ecosystem, supervised by [Prof. Karu Sankaralingam](https://karu.sites.cs.wisc.edu/wiki/) (UW–Madison / NVIDIA Research). There I lead full-duplex streaming support and work on runtime performance: KV-cache eviction, first-audio scheduling, and ASR/TTS serving.
+During my undergraduate studies, I was fortunate to work with [Prof. Karu Sankaralingam](https://karu.sites.cs.wisc.edu/wiki/) on research in machine learning for systems (ML for Systems).
 
-I've also worked on infrastructure agents, agent benchmarks, and CPU microarchitecture.
+I am currently a contributor to [SGLang-Omni](https://github.com/sgl-project/sglang-omni), an open-source serving framework for multimodal models.
 
-Interests
-======
-- LLM / multimodal model serving and inference runtimes
-- AI infrastructure and agent evaluation
-- Distributed systems and backend engineering
-
-News
-======
-- **2026**: *Harbor Adapters and Harbor-Index* accepted at **NeurIPS 2026** (poster).
-- **2026**: *InfraBench* accepted at **HotInfra 2026**.
-- **2026-07**: Started contributing to [SGLang-Omni](https://github.com/sgl-project/sglang-omni); leading the full-duplex streaming roadmap ([#1909](https://github.com/sgl-project/sglang-omni/issues/1909)).
-- **2025-12**: Graduated from UW–Madison (B.S. Computer Science).
+My interests lie in **AI agents**, **AI infrastructure**, and **recommendation systems**.
