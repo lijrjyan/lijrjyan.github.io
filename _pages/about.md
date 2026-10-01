@@ -7,11 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I'm Junnan Li. I received my B.S. in Computer Science from the University of Wisconsin–Madison, where I was fortunate to work with [Prof. Karu Sankaralingam](https://karu.sites.cs.wisc.edu/wiki/) on machine learning for systems.
+Hi! I'm Junnan Li, an incoming student at the Georgia Institute of Technology. I received my B.S. in Computer Science from the University of Wisconsin–Madison, where I was fortunate to work with [Prof. Karu Sankaralingam](https://karu.sites.cs.wisc.edu/wiki/) on machine learning for systems.
 
-Recently, I have become interested in AI infrastructure. I am contributing to [SGLang-Omni](https://github.com/sgl-project/sglang-omni), an open-source serving framework for multimodal models, mainly working on full-duplex streaming and serving performance.
-
-My interests lie in **AI agents**, **AI infrastructure**, and **recommendation systems**.
+My interests lie in **AI agents** and **AI infrastructure**. I am currently contributing to [SGLang-Omni](https://github.com/sgl-project/sglang-omni), mainly working on full-duplex streaming and serving performance.
 
 Publications
 ======
