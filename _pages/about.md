@@ -9,9 +9,9 @@ redirect_from:
 
 I'm Junnan Li, a software engineer based in Seattle. I graduated from the University of Wisconsin–Madison with a B.S. in Computer Science (Dec 2025).
 
-I work on **systems for serving and evaluating large models**. I'm currently an open-source core contributor to [SGLang-Omni](https://github.com/sgl-project/sglang-omni), the multimodal (speech / audio / omni-model) serving framework in the SGLang ecosystem, supervised by Karu. There I lead full-duplex streaming support and work on runtime performance: KV-cache eviction, first-audio scheduling, and ASR/TTS serving.
+I work on **systems for serving and evaluating large models**. I'm currently an open-source core contributor to [SGLang-Omni](https://github.com/sgl-project/sglang-omni), the multimodal (speech / audio / omni-model) serving framework in the SGLang ecosystem, supervised by [Prof. Karu Sankaralingam](https://karu.sites.cs.wisc.edu/wiki/) (UW–Madison / NVIDIA Research). There I lead full-duplex streaming support and work on runtime performance: KV-cache eviction, first-audio scheduling, and ASR/TTS serving.
 
-I've also worked on infrastructure agents, agent benchmarks, and CPU microarchitecture (see [Publications](/publications/)).
+I've also worked on infrastructure agents, agent benchmarks, and CPU microarchitecture.
 
 Interests
 ======
