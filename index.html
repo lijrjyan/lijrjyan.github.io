@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Junnan Li</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Junnan Li studies how models learn to act and interact.">
+<meta property="og:title" content="Junnan Li">
+<meta property="og:description" content="Junnan Li studies how models learn to act and interact.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='9' width='3' height='9' rx='1.5' fill='%231e6b8f'/%3E%3Crect x='10' y='5' width='3' height='13' rx='1.5' fill='%231e6b8f'/%3E%3Crect x='16' y='16' width='3' height='11' rx='1.5' fill='%23c08a3e'/%3E%3Crect x='22' y='16' width='3' height='7' rx='1.5' fill='%23c08a3e'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;0,7..72,500;1,7..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column. Header = round portrait + name, then a two-lane "duplex" waveform as the page's signature; entries hang their venue in a left gutter. */
+:root {
+  --bg: #f7f8f9;
+  --fg: #172029;
+  --muted: #5b6876;
+  --faint: #a3adb8;
+  --rule: #dde2e8;
+  --a: #1e6b8f;      /* listener lane / links */
+  --b: #c08a3e;      /* speaker lane: pier-light amber */
+  --serif: "Literata", "Iowan Old Style", Georgia, serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #0f141a; --fg: #e3e8ee; --muted: #95a1af; --faint: #56616d; --rule: #222b35; --a: #7fc2de; --b: #e0b06a; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #0f141a; --fg: #e3e8ee; --muted: #95a1af; --faint: #56616d; --rule: #222b35; --a: #7fc2de; --b: #e0b06a; color-scheme: dark; }
+
+body { margin: 0; background: var(--bg); color: var(--fg); font: 400 17px/1.7 var(--serif); -webkit-font-smoothing: antialiased; }
+.page { max-width: 760px; margin: 0 auto; padding-left: max(22px, env(safe-area-inset-left, 0px)); padding-right: max(22px, env(safe-area-inset-right, 0px)); padding-block: 80px 48px; }
+a { color: var(--a); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--a); outline-offset: 2px; border-radius: 2px; }
+
+header { display: flex; align-items: center; gap: 28px; }
+.portrait { width: 116px; height: 116px; flex: none; border-radius: 50%; object-fit: cover; object-position: 50% 32%; display: block; box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px var(--rule); }
+h1 { font-weight: 300; font-size: clamp(2.4rem, 1.6rem + 3vw, 3.4rem); line-height: 1.05; letter-spacing: -.015em; margin: 0; }
+.links { margin-top: 10px; font: 400 .8rem var(--mono); color: var(--muted); display: flex; flex-wrap: wrap; gap: 2px 18px; }
+
+.duplex { display: block; width: 100%; height: 56px; margin: 40px 0 8px; }
+.duplex-cap { font: 400 .68rem var(--mono); color: var(--faint); letter-spacing: .08em; display: flex; justify-content: space-between; }
+
+.about { margin-top: 36px; }
+.about p { margin: 0 0 12px; max-width: 60ch; }
+
+h2 .more { float: right; letter-spacing: .04em; text-transform: none; font-weight: 400; }
+h2 { font: 500 .74rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin: 56px 0 18px; }
+
+.entries { list-style: none; margin: 0; padding: 0; }
+.entry { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 22px; padding-block: 16px; border-top: 1px solid var(--rule); }
+.entry:last-child { border-bottom: 1px solid var(--rule); }
+.gut { font: 400 .76rem/1.5 var(--mono); color: var(--muted); padding-top: 4px; }
+.gut b { display: block; color: var(--fg); font-weight: 500; }
+.t { font-weight: 500; line-height: 1.45; display: block; }
+a.t { color: var(--fg); }
+a.t:hover { color: var(--a); }
+.au { display: block; color: var(--muted); font-size: .9rem; line-height: 1.55; margin-top: 3px; }
+.au b { color: var(--fg); font-weight: 500; }
+.lk { display: flex; gap: 14px; font: 400 .76rem var(--mono); margin-top: 6px; }
+
+footer { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 56px; font: 400 .72rem var(--mono); color: var(--faint); }
+
+@media (max-width: 560px) {
+  .page { padding-block: 48px 40px; }
+  header { gap: 18px; }
+  .portrait { width: 84px; height: 84px; }
+  .entry { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .gut b { display: inline; margin-right: 8px; }
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header>
+    <img class="portrait" src="assets/avatar.jpg" alt="Junnan Li" width="800" height="800">
+    <div>
+      <h1>Junnan Li</h1>
+      <div class="links">
+        <a href="https://scholar.google.com/citations?user=6A9suCYAAAAJ&amp;hl=en" target="_blank" rel="noopener">scholar</a>
+        <a href="https://www.linkedin.com/in/junnanli93/" target="_blank" rel="noopener">linkedin</a>
+        <a href="https://github.com/lijrjyan" target="_blank" rel="noopener">github</a>
+        <a href="https://x.com/junnanli01" target="_blank" rel="noopener">x</a>
+        <span>lijrjyan [at] gmail.com</span>
+      </div>
+    </div>
+  </header>
+
+  <canvas class="duplex" id="duplex" aria-hidden="true"></canvas>
+  <div class="duplex-cap" aria-hidden="true"><span>listen</span><span>speak</span></div>
+
+  <section class="about">
+    <p>I study how models learn to act and interact.</p>
+    <p>I received my B.S. in Computer Science from the <a href="https://www.cs.wisc.edu/" target="_blank" rel="noopener">University of Wisconsin–Madison</a>.</p>
+  </section>
+
+  <h2>Publications <a class="more" href="https://scholar.google.com/citations?user=6A9suCYAAAAJ&amp;hl=en" target="_blank" rel="noopener">full list on Google Scholar</a></h2>
+  <ul class="entries">
+    <li class="entry">
+      <div class="gut"><b>NeurIPS</b>2026</div>
+      <div>
+        <span class="t">Harbor Adapters and Harbor-Index: Infrastructure and a Curated Meta-Dataset for Large-Scale Agentic Evaluation</span>
+        <span class="au">Lin Shi, Haowei Lin, Zixuan Zhu, …, <b>Junnan Li</b>, …, Ludwig Schmidt, Alex Shaw</span>
+        <span class="lk"><a href="https://arxiv.org/abs/2609.04298" target="_blank" rel="noopener">paper</a></span>
+      </div>
+    </li>
+    <li class="entry">
+      <div class="gut"><b>HotInfra</b>2026</div>
+      <div>
+        <span class="t">InfraBench: Evaluating Infrastructure Agents Across Layers, Lifecycle, and Risk</span>
+        <span class="au">Yuan Gao, Zeren Yang, <b>Junnan Li</b>, Shawn (Wanxiang) Zhong, Ahmed Dajani, Mai Zheng, Andrea Arpaci-Dusseau, Remzi Arpaci-Dusseau</span>
+        <span class="lk"><a href="https://arxiv.org/abs/2608.11234" target="_blank" rel="noopener">paper</a><a href="https://infraben.ch" target="_blank" rel="noopener">leaderboard</a></span>
+      </div>
+    </li>
+    <li class="entry">
+      <div class="gut"><b>IROS</b>2026</div>
+      <div>
+        <span class="t">AtomTree: A Hierarchical Framework for State-Aware Embodied Instruction Following with LLMs</span>
+        <span class="au">H. Zhai, T. Sha, <b>Junnan Li</b></span>
+      </div>
+    </li>
+    <li class="entry">
+      <div class="gut"><b>IEEE CAL</b>2026</div>
+      <div>
+        <span class="t">Beyond Static Policies: Exploring Dynamic Policy Selection for Single-Thread Performance Optimization</span>
+        <span class="au">Yanxin Zhang, Ian McDougall, <b>Junnan Li</b>, Shayne Wadle, Vikas Singh, Karthikeyan Sankaralingam</span>
+        <span class="lk"><a href="https://arxiv.org/abs/2605.05471" target="_blank" rel="noopener">paper</a></span>
+      </div>
+    </li>
+  </ul>
+
+  <h2>Writing</h2>
+  <ul class="entries">
+    <li class="entry">
+      <div class="gut"><b>SGLang Blog</b>Oct 2026</div>
+      <div>
+        <a class="t" href="https://www.sglang.io/blog/omni-interactive-runtime" target="_blank" rel="noopener">Unified Runtime for Full-Duplex Interactive Intelligence with SGLang Omni</a>
+        <span class="au">SGLang-Omni Team: <b>Junnan Li</b>, Yuhao Chen, Wenyao Gao, Jiaxuan Luo, et al.</span>
+      </div>
+    </li>
+  </ul>
+
+  <footer><span>© 2026 Junnan Li</span><span>Last updated Nov 2026</span></footer>
+</div>
+
+<script>
+(() => {
+  const c = document.getElementById('duplex');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const tok = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  function draw(t) {
+    const r = c.getBoundingClientRect(), d = devicePixelRatio || 1;
+    if (c.width !== Math.round(r.width * d)) { c.width = r.width * d; c.height = r.height * d; }
+    const x = c.getContext('2d'); x.setTransform(d, 0, 0, d, 0, 0); x.clearRect(0, 0, r.width, r.height);
+    const mid = r.height / 2, n = Math.floor(r.width / 4);
+    const lanes = [[tok('--a'), 0, -1], [tok('--b'), 2.1, 1]];
+    for (const [col, ph, dir] of lanes) {
+      x.fillStyle = col;
+      for (let i = 0; i < n; i++) {
+        const s = i * 0.085 - t * 0.0009 * dir + ph;
+        const env = Math.max(0, Math.sin(s * 0.42 + ph)) ** 0.7;
+        const a = (0.55 + 0.3 * Math.sin(s * 3.1) + 0.15 * Math.sin(s * 7.3)) * env * (mid - 4);
+        x.globalAlpha = 0.25 + 0.6 * env;
+        if (dir < 0) x.fillRect(i * 4, mid - a, 2, a); else x.fillRect(i * 4, mid, 2, a);
+      }
+    }
+    x.globalAlpha = 1;
+    if (!reduce) requestAnimationFrame(draw);
+  }
+  draw(9000);
+  addEventListener('resize', () => reduce && draw(9000));
+})();
+</script>
+</body>
+</html>
